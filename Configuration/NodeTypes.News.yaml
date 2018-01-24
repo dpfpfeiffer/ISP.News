@@ -1,0 +1,17 @@
+'ISP.News:News':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: 'News'
+  childNodes:
+    'main':
+      type: 'Neos.Neos:ContentCollection'
+  properties:
+    title:
+      ui:
+        aloha:
+          placeholder: 'Title'
+    teaser:
+      ui:
+        aloha:
+          placeholder: 'Teaser'

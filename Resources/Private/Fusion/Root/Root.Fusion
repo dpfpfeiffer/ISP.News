@@ -1,0 +1,7 @@
+prototype(ISP.News:Root.document) < prototype(ISP.News:AbstractPage)
+prototype(ISP.News:Root) < prototype(Neos.Fusion:Collection) {
+    @process.layout = ISP.News:Components.DefaultLayout
+    collection = ${q(node).children('[instanceof Neos.Neos:Document]').get()}
+    itemName = 'node'
+    itemRenderer = ContentCase
+}

@@ -1,0 +1,19 @@
+prototype(ISP.News:News) {
+    title = Neos.Fusion:Tag {
+        tagName= 'span'
+        content = ${q(node).property('title')}
+        @process.contentElementEditable = ContentElementEditable {
+            property = 'title'
+        }
+    }
+    teaser = Neos.Fusion:Tag {
+        tagName= 'span'
+        content = ${q(node).property('teaser')}
+        @process.contentElementEditable = ContentElementEditable {
+            property = 'teaser'
+        }
+    }
+    main = ContentCollection {
+        nodePath = 'main'
+    }
+}
